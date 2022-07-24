@@ -1,0 +1,1 @@
+# fica-rico-fica-pobre
