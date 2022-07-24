@@ -1,0 +1,19 @@
+{
+  "name": "fica-rico-fica-pobre",
+  "version": "0.0.1",
+  "description": "Check the selected currency value based on BRL",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "author": "nethanos",
+  "license": "MIT",
+  "dependencies": {
+    "@aws-sdk/client-ses": "^3.131.0",
+    "dotenv": "^16.0.1",
+    "koa": "^2.13.4"
+  },
+  "devDependencies": {
+    "jest": "^28.1.3"
+  }
+}
