@@ -1,11 +1,17 @@
-const { getValue } = require('../src/index.js')
-
+const app = require('../src/app');
 
 describe('Test', () => {
 
     it('Should make a successful API call', async () => {
-        const value = await getValue();
-        console.log(value);
+
+        const expectedObj = { ask: 5.5, bid: 5.4, currency: 'BRL' }
+
+        jest.spyOn(global, 'fetch').mockResolvedValueOnce({ json: () => Promise.resolve(expectedObj) });
+
+        const value = await app.getValue();
+
+        expect(value).toBeTruthy();
+        expect(value).toEqual(expectedObj);
 
     })
 
